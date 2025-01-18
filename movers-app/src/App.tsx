@@ -4,16 +4,20 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<LoginPage />} />
-      </Routes>
+      <Navbar />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+        </Routes>
+      </div>
     </>
   );
 }
