@@ -7,30 +7,20 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: "autoUpdate",
-      includeAssets: ["favicon.svg", "robots.txt", "apple-touch-icon.png"],
       manifest: {
-        name: "Movers App",
-        short_name: "Movers",
-        description: "Manage your bookings and customers effortlessly.",
-        theme_color: "#ffffff",
+        name: "My PWA",
+        short_name: "PWA",
         icons: [
           {
-            src: "icon-192x192.png",
-            sizes: "192x192",
-            type: "image/png",
-          },
-          {
-            src: "icon-512x512.png",
+            src: "icons/512.png",
             sizes: "512x512",
             type: "image/png",
-          },
-          {
-            src: "icon-512x512.png",
-            sizes: "512x512",
-            type: "image/png",
-            purpose: "any maskable",
           },
         ],
+        start_url: "/",
+        display: "standalone",
+        background_color: "#ffffff",
+        theme_color: "#3f51b5",
       },
     }),
   ],
